@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function validateForm() {
+    let email = document.getElementById("email").value;
+    let errorMessage = document.getElementById("error-message");
+    
+    // Clear previous error message
+    errorMessage.innerHTML = "";
+
+    // Regular expression for basic email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email == "") {
+        errorMessage.innerHTML = "Email is required";
+        return false;  // Prevent form submission
+    } else if (!emailPattern.test(email)) {
+        errorMessage.innerHTML = "Please enter a valid email address";
+        return false;
+    }
+
+    alert("Valid email!");
+    return true;  // Allow form submission if valid
+}
+
+</script>
+</head>
+<body>
+    <form action="" onsubmit="return validateForm()">
+        <label for="email">Email ID</label>
+        <input type="text" name="email" id="email" required>
+        <input type="submit" value="register">
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p id="p1">This is a paragraph</p>
+    <p>This is just another paragraph</p>
+    <button onclick="f1()">Click</button>
+
+
+</body>
+<script>
+    function f1(){
+       let x =  document.getElementsByTagName("p");
+       alert(x[0].innerHTML);
+       alert(x[1].innerHTML);
+       x[0].innerHTML = "This is moified paragraph";
+       x[1].innerHTML = "This is moified paragraph";
+    }
+</script>
+</html>

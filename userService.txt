@@ -1,4 +1,0 @@
-Get the user data
-process the data
-
-Crate a avtar for user

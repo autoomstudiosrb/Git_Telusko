@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handleing</title>
+</head>
+<body>
+    <h1 >Welcome to autoom studio</h1>
+    <span id="para1" onmouseover="effect()" onmouseout="fadeout()">This is for test</span>
+</body>
+<script>
+    function effect(){
+        let x= document.getElementById("para1");
+        x.style.backgroundColor="lightblue";
+    }
+    function fadeout()
+    {
+        let y= document.getElementById("para1");
+        y.style.backgroundColor="white";
+    }
+</script>
+</html>
